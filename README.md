@@ -25,8 +25,11 @@ Inbound* - port 5432 (PostgreSQL) for SG that was created for EC2.
 Outbound rules - All allowed.
 
 3.Create below resources with the help of their separate terraform modules. Create your own modules, don't use terraform modules from documentation / community.
+
 -RDS instance - PostgreSQL with minimum hardware (should be within free tier). RDS should be created within private subnets.
+
 -EC2 instance - Linux t2.micro instance should be in public subnet. Also, create a public / private key pair for authentication over SSH.
+
 -VPC components - as stated in point 1.
 
 Note: You must not hardcode your AWS credentials in git repo / terraform code. State lock feature is not mandatory to be used, but use the remote state storage.
